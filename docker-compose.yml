@@ -1,0 +1,35 @@
+version: '3'
+
+
+services:
+    mysql:
+        image: mysql:8.0.19 
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./mysql-data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: 123456
+            MYSQL_DATABASE: 'geometry'
+
+    php:
+        build: .
+        image: php:7.4-rc-apache
+        restart: always
+        volumes:
+            - .:/var/www/html
+        ports:
+            - '80:80'
+        links:
+            - mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links:
+            - mysql
+        ports:
+            - 8080:80
+        environment:
+            - PMA_ARBITRARY=1
