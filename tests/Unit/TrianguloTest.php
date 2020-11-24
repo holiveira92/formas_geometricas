@@ -10,7 +10,6 @@ class TrianguloTest extends TestCase
     /** @test */
     public function check_if_triangle_data_entry_is_valid()
     {   
-        $data           = json_encode(array("lado_a" => 3, "lado_b" => 3, "lado_c" => -3));
         $response       = Http::post('http://localhost:8000/api/triangulo/', [
             'lado_a' => 15,
             'lado_b' => 13,

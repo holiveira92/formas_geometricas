@@ -10,12 +10,7 @@ class RetanguloTest extends TestCase
     /** @test */
     public function check_if_triangle_data_entry_is_valid()
     {   
-        $data           = json_encode(array("lado_a" => 3, "lado_b" => 3, "lado_c" => -3));
-        $response       = Http::post('http://localhost:8000/api/retangulo/', [
-            'lado_a' => 15,
-            'lado_b' => 13,
-            'lado_c' => -3
-        ]);
+        $response       = Http::post('http://localhost:8000/api/retangulo/', ['base' => 15,'altura' => -10]);
         $this->assertTrue($response->hasHeader('Location'));
         $this->assertStatus(200);
     }
