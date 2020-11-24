@@ -79,7 +79,7 @@ class RetanguloController extends Controller{
     }
 
     /**
-     * Endpoint para removação de um retangulo na API
+     * Endpoint para remoção de um retangulo na API
     */
     public function delete($id){
         $this->retangulo->delete_data($id);

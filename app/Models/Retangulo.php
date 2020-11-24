@@ -45,7 +45,7 @@ class Retangulo extends Authenticatable
     }
 
     /**
-     * obtém dados do médico por ID
+     * obtém dados do retângulo por ID
      */
     public function get_retangulo_by_id($retangulo_id){
         $retangulo = $this->stdClass_to_Array(
@@ -58,7 +58,7 @@ class Retangulo extends Authenticatable
     }
 
     /**
-     * obtém coleção de dados dos médico cadastrados
+     * obtém coleção de dados dos retângulo cadastrados
      */
     public function get_retangulos(){
         $retangulo = $this->stdClass_to_Array(

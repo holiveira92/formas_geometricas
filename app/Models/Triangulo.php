@@ -59,7 +59,7 @@ class Triangulo extends Authenticatable
     }
 
     /**
-     * obtém dados do médico por ID
+     * obtém dados do triangulo por ID
      */
     public function get_triangulo_by_id($triangulo_id){
         $triangulo = $this->stdClass_to_Array(
@@ -72,7 +72,7 @@ class Triangulo extends Authenticatable
     }
 
     /**
-     * obtém coleção de dados dos médico cadastrados
+     * obtém coleção de dados dos triangulo cadastrados
      */
     public function get_triangulos(){
         $triangulo = $this->stdClass_to_Array(
@@ -80,6 +80,14 @@ class Triangulo extends Authenticatable
                     ->select('*')
                     ->get()->toArray());
         return $triangulo;
+    }
+
+    /**
+     * Obtém toda a coleção de dados do BD
+     */
+    public function get_all(){
+        $triangulos = $this->get()->toArray();
+        return $triangulos;
     }
 
     /**

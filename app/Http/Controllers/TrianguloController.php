@@ -83,7 +83,7 @@ class TrianguloController extends Controller{
     }
 
     /**
-     * Endpoint para removação de um triângulo na API
+     * Endpoint para remoção de um triângulo na API
     */
     public function delete($id){
         $this->triangulo->delete_data($id);
