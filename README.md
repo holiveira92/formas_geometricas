@@ -40,3 +40,7 @@ DELETE: api/retangulo/ID
 Body exemplo:
 
 { "base" : 5, "altura" : 6 }
+
+API Área dos Polígonos
+
+GET: api/area_poligonos/
