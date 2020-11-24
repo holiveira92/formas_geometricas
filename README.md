@@ -13,11 +13,13 @@ API Triangulo
 
 GET: api/triangulo/
 
-GET: api/triangulo/X
+GET: api/triangulo/ID
 
 POST: api/triangulo/
 
-PUT: api/triangulo/X
+PUT: api/triangulo/ID
+
+DELETE: api/triangulo/ID
 
 Body exemplo:
 
@@ -27,11 +29,13 @@ API Retângulo
 
 GET: api/retangulo/
 
-GET: api/retangulo/X
+GET: api/retangulo/ID
 
 POST: api/retangulo/
 
-PUT: api/retangulo/X
+PUT: api/retangulo/ID
+
+DELETE: api/retangulo/ID
 
 Body exemplo:
 
